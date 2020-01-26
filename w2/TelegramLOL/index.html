@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<head>
+    <title>Telegram</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div>
+        <h1>TelegramLol</h1>
+            <h2>Sign in</h2>
+            <p>Please enter you phone number</p>
+            <form>
+                <label for="country">Country</label>
+                <input type="submit" value="Next->">
+                <input type="text" name="country" list="countries" required>
+                <datalist id="countries">
+                    <option value="kz">Kazakhstan</option>
+                    <option value="ru">Russia</option>
+                </datalist>
+                <br>
+                <label for="code">Code</label>
+                <input type="text" minlength="1" maxlength="5" required>
+                <label for="number">number</label>
+                <input type="text" pattern="[0-9]{10}" required value="phone number">
+            </form>
+    </div>
+</body>
