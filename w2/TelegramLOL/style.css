@@ -1,31 +1,74 @@
 body
 {
-    background-color: steelblue;
-}
-#wrapper
-{
-    text-align: center;
-}
-div
-{
-    background-color: white;
-    width: min-content;
-    height: min-content;
-    margin: 100px auto;
-    padding: 5px 20px;
+    overflow: hidden;
 }
 
-input
+.button
 {
-    border: gray 0 1 0 0;
+    border: none;
+    background-color: #5682a3;
+}
+
+.textfield{
+    width: max-content;
+    border: none;
+    border-bottom: 1px solid gray;
+}
+
+span{
+    color: white;
+}
+
+.right-align{
+    padding-left: 20%;
+}
+
+.topper, .bottomer
+{
+    height: 60vh;
+    width: 110%;
+}
+
+.topper{
+    background-color: #5682a3;
+}
+
+.bottomer{
+    background-color: #f7f7f7;
+}
+
+#login
+{
+    margin: 3vh auto;
+    position: absolute;
+    top: 10%;
+    right: 20%;
+    left: 20%
+}
+
+input{
+    width: 200px;
+}
+
+label, .gray{
+    color: gray;
+}
+
+#sign-in{
+    border-radius: 2px;
+    background-color: white;
+    padding: 10% 10%;
+    text-align: left;
+}
+
+footer{
+    text-align: center;
+    font-size: small;
+    color:gray;
 }
 
 h1
 {
-    background-color: steelblue;
-}
-
-form
-{
-    padding: 20px;
+    color:white;
+    background-color: #5682a3;
 }
