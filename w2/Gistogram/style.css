@@ -2,11 +2,10 @@ body{
     padding: 0px;
     margin: 0px;
     background-color: #dddddd;
+    overflow-x: hidden;
 }
 
 #left{
-    float: left;
-    text-align: right;
     position: absolute;
     left: 15%;
 }
@@ -18,9 +17,9 @@ body{
 }
 
 img{
-    width: 70%;
-    height: 70%;
-    display: block;
+    padding: 7% 15%;
+    height: 55%;
+    width: 55%;
 }
 
 .white-ramka{
@@ -51,6 +50,11 @@ img{
     font-size: small;
 }
 
+#stores img{
+    width: 10%;
+    height: 10%;
+}
+
 input{
     margin: 10px 0px;
     width: 66%;
@@ -71,12 +75,31 @@ input{
 }
 
 footer{
-    background-color: white;
+    text-align: center;
+    padding: 3% 20px;
+    position: relative;
+    top: 100vh;
     width: 100%;
-    padding: auto 10%;
-    margin: 0px;
-    position: absolute;
-    display: block;
-    bottom: 0;
-    height: 100px;
+
+}
+
+footer a{
+    padding: 5px 10px;
+    text-decoration: none;
+    color: darkblue;
+    font-family: sans-serif;
+}
+
+footer a:hover{
+    text-decoration: none;
+}
+
+footer a:visited{
+    text-decoration: none;
+    color: darkblue;
+}
+
+#rights{
+    font-size: small;
+    color: #a3a3a3;
 }
