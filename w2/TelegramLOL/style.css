@@ -1,6 +1,7 @@
 body
 {
-    overflow: hidden;
+    padding: 0px;
+    margin: 0px;
 }
 
 .button
@@ -25,8 +26,8 @@ span{
 
 .topper, .bottomer
 {
-    height: 60vh;
-    width: 110%;
+    height: 50vh;
+    width: 100%;
 }
 
 .topper{
@@ -39,27 +40,26 @@ span{
 
 #login
 {
-    margin: 3vh auto;
+    width: 30%;
+    margin: auto;
     position: absolute;
-    top: 10%;
-    right: 20%;
-    left: 20%
+    top: 20%;
+    left: 50%;
+    font-size: small;
+    text-align: center;
 }
 
-input{
-    width: 200px;
+#sign-in{
+    border-radius: 2px;
+    background-color: white;
+    padding: 5% 10px;
+    text-align: left;
 }
 
 label, .gray{
     color: gray;
 }
 
-#sign-in{
-    border-radius: 2px;
-    background-color: white;
-    padding: 10% 10%;
-    text-align: left;
-}
 
 footer{
     text-align: center;
