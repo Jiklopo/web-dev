@@ -50,11 +50,6 @@ img{
     font-size: small;
 }
 
-#stores img{
-    width: 10%;
-    height: 10%;
-}
-
 input{
     margin: 10px 0px;
     width: 66%;
@@ -64,6 +59,14 @@ input{
     background-color: #dddddd;
 }
 
+#fb-logo{
+    display: inline-block;
+    width: 30px;
+    height: 30px;
+    padding: 0px;
+    margin: 0px;
+}
+
 
 .button{
     color: white;
@@ -71,7 +74,7 @@ input{
     border-radius: 5px;
     border: none;
     padding: 3% 15%;
-    width:  70%;
+    width:  fit-content;
 }
 
 footer{

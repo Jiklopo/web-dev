@@ -87,3 +87,9 @@ header a:visited{
 #slogan p{
     width: 40%;
 }
+
+ul{
+    list-style: none;
+    display: inline-flex;
+    margin-bottom: 15px;
+}
