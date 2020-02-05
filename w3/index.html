@@ -9,22 +9,27 @@
 <body>
     <header>
         <h1>JikloList</h1>
-        <input type="text" id="taskText" placeholder="What will you not do?">
+        <input type="text" id="taskInput" placeholder="What will you not do?">
         <span onclick="newElement()" id="addBtn">Add</span>
     </header>
 
-    <ul id="taskList">
-        <li>Eat icecream</li>
-        <li class="checked">Get up early</li>
-        <li>Earn 1.000.000$</li>
-        <li>Spend 1.000.000$</li>
-        <li>Earn 1.000.000$ Again</li>
-        <li>Do not waste money this time!</li>
+    <ul id="taskText">
     </ul>
 
     <script>
         var myNodelist = document.getElementsByTagName("LI");
+        var savedTasksLen = localStorage.getItem("savedTasksLength")
         var i;
+        for (i = 0; i < savedTasksLen; i++) {
+            var l = document.createElement("LI");
+            l.textContent = localStorage.getItem("task" + i);
+            var span = document.createElement("SPAN");
+            var txt = document.createTextNode("\u00D7");
+            span.className = "close";
+            span.appendChild(txt);
+            l.appendChild(span);
+            document.getElementById("taskText").appendChild(l);
+        }
         for (i = 0; i < myNodelist.length; i++) {
             var span = document.createElement("SPAN");
             var txt = document.createTextNode("\u00D7");
@@ -50,16 +55,16 @@
         }, false);
 
         function newElement() {
-            var li = document.createElement("li");
-            var inputValue = document.getElementById("taskText").value;
+            var li = document.createElement("LI");
+            var inputValue = document.getElementById("taskInput").value;
             var t = document.createTextNode(inputValue);
             li.appendChild(t);
             if (inputValue === '') {
                 alert("You must write something!");
             } else {
-                document.getElementById("taskList").appendChild(li);
+                document.getElementById("taskText").appendChild(li);
             }
-            document.getElementById("taskText").value = "";
+            document.getElementById("taskInput").value = "";
 
             var span = document.createElement("SPAN");
             var txt = document.createTextNode("\u00D7");
@@ -73,8 +78,13 @@
                     div.style.display = "none";
                 }
             }
+            var lists = document.getElementsByTagName("LI");
+            for (i = 0; i < lists.length; i++) {
+                localStorage.setItem("task" + i, lists[i].textContent.substring(0, lists[i].textContent.length - 1));
+            }
+            localStorage.setItem("savedTasksLength", lists.length);
         }
-        </script>
+    </script>
 </body>
 
 </html>
