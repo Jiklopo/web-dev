@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import {products} from '../products';
+import { ShareButtonModule} from '@ngx-share/button';
 
 @Component({
   selector: 'app-product-list',
@@ -7,7 +8,7 @@ import {products} from '../products';
   styleUrls: ['./product-list.component.css']
 })
 export class ProductListComponent implements OnInit {
-  products = products
+  products = products;
   constructor() { }
 
   ngOnInit(): void {

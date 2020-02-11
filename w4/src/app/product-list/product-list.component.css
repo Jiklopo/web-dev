@@ -5,15 +5,27 @@ img{
 
 .product{
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
   background-color: #5f79ff;
   margin: 20px;
+  border-radius: 5px;
 }
 
 .product img{
-  float: left;
+  border: #0542ff solid 2px;
+  margin: 20px 20px;
 }
 
 .product-text{
-  float: right;
+  margin: 20px;
+  padding: 10px 20px;
+  background-color: #6ec0ff;
+  border: #5f79ff dashed 2px;
+}
+
+a{
+  text-decoration: none;
+}
+
+a:visited{
 }
