@@ -1,0 +1,15 @@
+<base href="products">
+<h1>Welcome to Laliexpress!</h1>
+
+<div *ngFor="let prd of products ">
+  <div class="product">
+    <img *ngIf="prd.imagesLinks" [src]="prd.imagesLinks" [alt]="prd.name">
+    <div class="product-text">
+      <a [href]="prd.link">
+        <h3>{{prd.name}}</h3>
+      </a>
+      <h3 *ngIf="prd.rating != 0">{{prd.rating}} <img src="../../../images/star.png" alt="*"></h3>
+      <h3>{{prd.price}} tenge </h3>
+    </div>
+  </div>
+</div>

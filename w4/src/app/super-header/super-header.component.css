@@ -1,0 +1,16 @@
+*{
+  padding: 0px;
+  margin: 0px;
+}
+
+header{
+  position: absolute;
+  top: 0;
+  left: 0;
+  margin: 0px;
+  padding: 2% 5%;
+  width: 100%;
+  box-sizing: border-box;
+  background-color: #0542ff;
+  color: aliceblue;
+}
