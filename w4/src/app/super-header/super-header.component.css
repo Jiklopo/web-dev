@@ -11,6 +11,24 @@ header{
   padding: 2% 5%;
   width: 100%;
   box-sizing: border-box;
-  background-color: #0542ff;
+  background-color: #800080;
   color: aliceblue;
+  display: flex;
+  justify-content: space-between;
+}
+
+header h3{
+  display: inline-block;
+  border: white solid 2px;
+}
+
+form{
+  display: inline-block;
+}
+
+input{
+  margin: 5px 10px 0px 10px;
+  width: 200px;
+  height: 30px;
+  box-sizing: border-box;
 }

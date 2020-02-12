@@ -6,21 +6,23 @@ img{
 .product{
   display: flex;
   justify-content: space-between;
-  background-color: #5f79ff;
+  background-color: #800080;
   margin: 20px;
   border-radius: 5px;
 }
 
 .product img{
-  border: #0542ff solid 2px;
+  border: #FFC0CB solid 2px;
+  border-radius: 5px;
   margin: 20px 20px;
 }
 
 .product-text{
   margin: 20px;
   padding: 10px 20px;
-  background-color: #6ec0ff;
-  border: #5f79ff dashed 2px;
+  background-color: #CC99FE;
+  border: #CC99FE dashed 2px;
+  border-radius: 5px;
 }
 
 a{
