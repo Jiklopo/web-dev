@@ -1,6 +1,6 @@
-import { Component, OnInit } from '@angular/core';
-import {Category, categories} from '../categories';
-import {Observable, of} from 'rxjs';
+import {Component, OnInit} from '@angular/core';
+import {categories, Category} from '../categories';
+import {of} from 'rxjs';
 import {Product} from '../product';
 
 @Component({
@@ -17,7 +17,7 @@ export class CategoriesComponent implements OnInit {
     of(categories).subscribe(cat => this.categories = cat);
   }
 
-  private getRandomImage(products: Product[]): string {
+  public getRandomImage(products: Product[]): string {
     return products[Math.floor(Math.random() * products.length)].imagesLinks;
   }
 
