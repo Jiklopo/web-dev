@@ -1,0 +1,33 @@
+#category-list{
+  display: flex;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+}
+
+.category{
+  box-sizing: border-box;
+  border-radius: 5px;
+  padding: 15px 20px;
+  margin: 10px;
+}
+
+.category h2{
+  text-align: center;
+  margin: 5px;
+}
+
+.category img {
+  width: 250px;
+  height: 250px;
+  border-radius: 5px;
+}
+
+.category a{
+  text-decoration: none;
+  color: purple;
+}
+
+.category a:visited{
+  text-decoration: none;
+  color: purple;
+}
