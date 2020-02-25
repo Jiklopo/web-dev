@@ -14,12 +14,16 @@ header{
   justify-content: space-between;
 }
 
-header h3{
+a {
+  color: aliceblue;
+}
+
+header h3 {
   display: inline-block;
   border: white solid 2px;
 }
 
-form{
+form {
   display: inline-block;
 }
 

@@ -9,11 +9,13 @@ import {ShareButtonsModule} from '@ngx-share/buttons';
 import {FormsModule} from '@angular/forms';
 import {CategoriesComponent} from './categories/categories.component';
 import {Route, RouterModule} from '@angular/router';
+import {CartComponent} from './cart/cart.component';
 
 const routes: Route[] = [
   {path: 'categories', component: CategoriesComponent},
   {path: '', redirectTo: '/categories', pathMatch: 'full'},
-  {path: 'categories/:categoryId/products', component: ProductListComponent}
+  {path: 'categories/:categoryId/products', component: ProductListComponent},
+  {path: 'cart', component: CartComponent}
 ];
 
 @NgModule({
@@ -22,6 +24,7 @@ const routes: Route[] = [
     ProductListComponent,
     SuperHeaderComponent,
     CategoriesComponent,
+    CartComponent,
   ],
   imports: [
     BrowserModule,

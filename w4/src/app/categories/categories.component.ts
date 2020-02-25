@@ -1,7 +1,8 @@
 import {Component, OnInit} from '@angular/core';
 import {categories, Category} from '../categories';
 import {of} from 'rxjs';
-import {Product} from '../product';
+import {CategoryService} from '../category.service';
+import {products} from '../products';
 
 @Component({
   selector: 'app-categories',
@@ -11,14 +12,16 @@ import {Product} from '../product';
 export class CategoriesComponent implements OnInit {
   categories: Category[];
 
-  constructor() { }
+  constructor(categoryService: CategoryService) {
+  }
 
   private getCategories(): void {
     of(categories).subscribe(cat => this.categories = cat);
   }
 
-  public getRandomImage(products: Product[]): string {
-    return products[Math.floor(Math.random() * products.length)].imagesLinks;
+  public getRandomImage(categoryId: number): string {
+    const prods = products.filter(prd => prd.categoryId === categoryId);
+    return prods[Math.floor(Math.random() * prods.length)].imagesLinks;
   }
 
   ngOnInit(): void {

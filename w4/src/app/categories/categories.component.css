@@ -21,13 +21,3 @@
   height: 250px;
   border-radius: 5px;
 }
-
-.category a{
-  text-decoration: none;
-  color: purple;
-}
-
-.category a:visited{
-  text-decoration: none;
-  color: purple;
-}

@@ -1,15 +1,19 @@
-import { Injectable } from '@angular/core';
+import {Injectable} from '@angular/core';
 import {Observable, of} from 'rxjs';
 import {Product} from './product';
-import {Category, categories} from './categories';
+import {categories, Category} from './categories';
+import {products} from './products';
 
 @Injectable({
   providedIn: 'root'
 })
 export class CategoryService {
-  constructor() { }
+  categories: Category[] = categories;
 
-  public getProductFromCategory(categoryId: number): Observable<Product[]> {
-    return of(categories.find(cat => cat.id === categoryId).products);
+  constructor() {
+  }
+
+  public getProductsFromCategory(categoryId: number): Observable<Product[]> {
+    return of(products.filter(prd => prd.categoryId === categoryId));
   }
 }
