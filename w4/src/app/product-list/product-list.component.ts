@@ -1,7 +1,6 @@
 import {Component, OnInit} from '@angular/core';
 import {Product} from '../product';
 import {CategoryService} from '../category.service';
-import {Location} from '@angular/common';
 import {ActivatedRoute} from '@angular/router';
 import {CartService} from '../cart.service';
 
@@ -15,10 +14,9 @@ export class ProductListComponent implements OnInit {
   products: Product[];
 
   constructor(
-    private categoryService: CategoryService,
+    public categoryService: CategoryService,
+    public cartService: CartService,
     private route: ActivatedRoute,
-    private location: Location,
-    private cartService: CartService
   ) {
   }
 
