@@ -10,12 +10,14 @@ import {FormsModule} from '@angular/forms';
 import {CategoriesComponent} from './categories/categories.component';
 import {Route, RouterModule} from '@angular/router';
 import {CartComponent} from './cart/cart.component';
+import {ProductDetailsComponent} from './product-details/product-details.component';
 
 const routes: Route[] = [
   {path: 'categories', component: CategoriesComponent},
   {path: '', redirectTo: '/categories', pathMatch: 'full'},
   {path: 'categories/:categoryId/products', component: ProductListComponent},
-  {path: 'cart', component: CartComponent}
+  {path: 'cart', component: CartComponent},
+  {path: 'products/:productId', component: ProductDetailsComponent}
 ];
 
 @NgModule({
@@ -25,6 +27,7 @@ const routes: Route[] = [
     SuperHeaderComponent,
     CategoriesComponent,
     CartComponent,
+    ProductDetailsComponent,
   ],
   imports: [
     BrowserModule,

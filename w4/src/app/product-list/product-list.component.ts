@@ -22,10 +22,6 @@ export class ProductListComponent implements OnInit {
   ) {
   }
 
-  public addToCart(product: Product): void {
-    this.cartService.addToCart(product);
-  }
-
   private getProducts(): void {
     const id = +this.route.snapshot.paramMap.get('categoryId');
     this.categoryService.getProductsFromCategory(id).subscribe(products => this.products = products);

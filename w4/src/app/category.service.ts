@@ -16,4 +16,8 @@ export class CategoryService {
   public getProductsFromCategory(categoryId: number): Observable<Product[]> {
     return of(products.filter(prd => prd.categoryId === categoryId));
   }
+
+  public getProduct(productId: number): Observable<Product> {
+    return of(products.find(prd => prd.id === productId));
+  }
 }
