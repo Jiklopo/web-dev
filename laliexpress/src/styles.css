@@ -1,0 +1,43 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: 'Roboto', sans-serif;
+  font-size: x-large;
+}
+
+app-super-header {
+  position: sticky;
+  top: 0;
+}
+
+.dark-backgr {
+  background-color: #800080;
+}
+
+.light-backgr {
+  background-color: #CC99FE;
+}
+
+.header-text {
+  color: purple;
+}
+
+a {
+  text-decoration: none;
+  color: purple;
+}
+
+a:visited {
+  text-decoration: none;
+  color: purple;
+}
+
+button {
+  padding: 5px;
+  border-radius: 5px;
+  border: 2px purple solid;
+  font-weight: bold;
+  background-color: #CC99FE;
+  color: purple;
+  margin: 5px;
+}

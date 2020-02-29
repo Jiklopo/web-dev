@@ -1,0 +1,20 @@
+<div *ngFor="let prd of products ">
+  <div class="product">
+    <img *ngIf="prd.imagesLinks" [src]="prd.imagesLinks" [alt]="prd.name">
+    <div class="product-text light-backgr">
+      <a [routerLink]="'/products/' + prd.id">
+        <h3 class="header-text">{{prd.name}}</h3>
+      </a>
+      <p>
+        <span *ngIf="prd.rating != 0">Rating: {{prd.rating}}<br></span>
+        <span>Price: {{prd.price}} tenge <br></span>
+        Actually, products from aliexpress do not have regular description, it is in a table form.
+        I did not have time to implement a table so just enjoy this fine description.
+      </p>
+      <div class="buttons">
+        <button (click)="cartService.addToCart(prd)">Add To Cart</button>
+        <button><a [href]="'https://vk.com/share.php?url=' + prd.link" target="_blank">Share via VK</a></button>
+      </div>
+    </div>
+  </div>
+</div>
