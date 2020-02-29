@@ -1,0 +1,6 @@
+<div *ngIf="job">
+  <h1>{{job.title}}</h1>
+  <p>{{job.description}}</p>
+  <h2>{{job.like_count}}</h2>
+  <button (click)="like()">Like Job</button>
+</div>
