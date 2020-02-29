@@ -1,0 +1,20 @@
+<main>
+  <div *ngIf="task" id="task">
+    <h1>{{task.title}} - <span [style]="taskService.getStatusColor(task)"
+                               class="status">{{taskService.getStatus(task)}}</span></h1>
+    <p>
+      {{task.description}}
+    </p>
+
+    <h2>Set status</h2>
+    <input [(ngModel)]="task.status" max="1" min="-1" type="number">
+    <h2>Change Title</h2>
+    <input [(ngModel)]="task.title">
+    <h2>Change Description</h2>
+    <input [(ngModel)]="task.description">
+  </div>
+
+  <a routerLink="">
+    <button>Go Back</button>
+  </a>
+</main>

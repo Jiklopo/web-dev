@@ -1,0 +1,8 @@
+<h1>Хаймович Тимур, 18BD110452</h1>
+<main>
+  <div *ngFor="let t of tasks">
+    <h2><a [routerLink]="'/tasks/' + t.id">{{t.title}}</a> - <span [style]="taskService.getStatusColor(t)"
+                                                                   class="status">{{taskService.getStatus(t)}}</span>
+    </h2>
+  </div>
+</main>
