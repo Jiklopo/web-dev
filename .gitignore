@@ -1,2 +1,5 @@
 /w5/heroes/src/app/
-/.idea/
+djongo/bin
+djongo/include
+djongo/lib
+djongo/lib64
