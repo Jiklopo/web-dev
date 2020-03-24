@@ -4,7 +4,7 @@ def categories(request):
     return HttpResponse("Categories")
 
 def category(request, id):
-    return HttpResponse("Id: " + id)
+    return HttpResponse(id)
 
 def products(request, id):
-    return HttpResponse("Products of category id == " + id)
+    return HttpResponse(id)

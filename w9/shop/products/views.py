@@ -5,4 +5,4 @@ def products(request):
     return HttpResponse("Products")
 
 def product(request, id):
-    return HttpResponse("Products id: " + id)
+    return HttpResponse(id)
