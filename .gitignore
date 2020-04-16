@@ -1,6 +1,5 @@
-/w5/heroes/src/app/
-djongo/bin
-djongo/include
-djongo/lib
-djongo/lib64
+/w5/heroes/src/app
 */venv
+*/*/venv
+*/.idea
+*/*/.idea
