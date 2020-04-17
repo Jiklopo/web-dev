@@ -5,7 +5,7 @@ import {VacanciesComponent} from './vacancies/vacancies.component';
 
 
 const routes: Routes = [
-  {path: '', pathMatch: 'full', redirectTo: 'companies'},
+  {path: '', pathMatch: 'full', redirectTo: '/companies'},
   {path: 'companies', component: CompaniesComponent},
   {path: 'companies/:companyId/vacancies', component: VacanciesComponent}
 ];

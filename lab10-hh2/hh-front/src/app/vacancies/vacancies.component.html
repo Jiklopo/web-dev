@@ -1,1 +1,7 @@
-<p>vacancies works!</p>
+<div *ngFor="let vacancy of vacancies">
+  <h1>{{vacancy.name}}</h1>
+  <p>{{vacancy.description}}</p>
+  <h2><b>Salary:</b> {{vacancy.salary}}</h2>
+</div>
+
+<h1 *ngIf="vacancies.length == 0">No vacancies available.</h1>

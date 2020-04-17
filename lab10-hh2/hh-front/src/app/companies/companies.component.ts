@@ -1,4 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, OnInit} from '@angular/core';
+import {Company} from '../_interfaces/Company';
+import {DataService} from '../data.service';
 
 @Component({
   selector: 'app-companies',
@@ -6,10 +8,12 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./companies.component.css']
 })
 export class CompaniesComponent implements OnInit {
+  companies: Company[];
 
-  constructor() { }
-
-  ngOnInit(): void {
+  constructor(private dataService: DataService) {
   }
 
+  ngOnInit(): void {
+    this.dataService.getCompanies().subscribe(c => this.companies = c);
+  }
 }
