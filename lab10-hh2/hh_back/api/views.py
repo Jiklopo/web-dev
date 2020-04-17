@@ -1,10 +1,10 @@
+from django.views.decorators.csrf import csrf_exempt
 from rest_framework.response import Response
 from rest_framework.decorators import api_view
 from rest_framework.views import APIView
 from api.models import Company, Vacancy
 from api.serializers import CompanySerializer, VacancySerializer
 from rest_framework import status
-
 
 @api_view(['GET', 'POST'])
 def companies(request):
@@ -49,7 +49,7 @@ def company_vacancies(request, company_id):
     try:
         comp = Company.objects.get(id=company_id)
         serializer = VacancySerializer(
-            [v.to_json() for v in Vacancy.objects.filter(company=comp)],
+            Vacancy.objects.filter(company=comp),
             many=True
         )
         return Response(serializer.data)
@@ -99,7 +99,7 @@ class VacancyView(APIView):
 class VacancyTopTenView(APIView):
     def get(self, request):
         serializer = VacancySerializer(
-            [v.to_json() for v in Vacancy.objects.order_by('-salary', 'name')[:10]],
+            Vacancy.objects.order_by('-salary', 'name')[:10],
             many=True
         )
         return Response(serializer.data)
