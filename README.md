@@ -1,2 +1,1 @@
-# WebDev
-## Web Development course Spring 2020
+# Web development spring 2020
